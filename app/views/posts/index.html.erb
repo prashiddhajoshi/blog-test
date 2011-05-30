@@ -1,0 +1,16 @@
+<h1>Posts</h1>
+
+<h2>What people are talking about</h2>
+<% @popular_posts.each do |post| %>
+  <% post_pop(post) %>
+  <h4><%= link_to title (length)", user_post_path(current_user,post) %></h4>
+  <%= text %>
+<% end %>
+
+<h2>All Posts</h2>
+<% for post in @posts %>
+  <% post_pop(post) %>
+  <h4><%= link_to title (length), user_post_path(current_user,post) %></h4>
+  <%= text %>
+<% end %>
+
